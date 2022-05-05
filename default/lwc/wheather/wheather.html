@@ -1,0 +1,28 @@
+<template>
+    <template if:true={weatherdays.data}>
+        <div class="slds-scrollable_x" style="height:15rem;width:55rem">   
+            <div class="c-container" >
+                <lightning-layout horizontal-align="spread" vertical-align="center">
+                    <template for:each={weatherdays.data} for:item="DaysWithForecast">
+                        <lightning-layout-item size="4" padding="around-small" key={DaysWithForecast.dateWeather}>
+                            <lightning-card class="card" title={DaysWithForecast.dateWeather} footer="text">
+                                <template if:true={DaysWithForecast.isItRain}>
+                                    <p class="slds-p-horizontal_small"><img src={rain}>{DaysWithForecast.temp} &#8457;</p>
+                                </template>
+                                <template if:true={DaysWithForecast.isItSun}>
+                                    <p class="slds-p-horizontal_small"><img src={sun}>{DaysWithForecast.temp} &#8457;</p>
+                                </template>
+                                <template if:true={DaysWithForecast.isItParticalyCloudy}>
+                                    <p class="slds-p-horizontal_small"><img src={cloudy}>{DaysWithForecast.temp} &#8457;</p>
+                                </template>
+                                <template if:true={DaysWithForecast.isItCloudy}>
+                                    <p class="slds-p-horizontal_small"><img src={cloud}>{DaysWithForecast.temp} &#8457;</p>
+                                </template>
+                            </lightning-card>
+                        </lightning-layout-item>
+                    </template>>
+                </lightning-layout>
+            </div>
+        </div>
+    </template>
+</template>

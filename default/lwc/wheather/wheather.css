@@ -1,0 +1,26 @@
+.c-container {
+    margin: 20px 0 20px 0;
+}
+
+.custom-box {
+    text-align: center;
+    background-color: #f4f6f900;
+    padding: 1rem;
+    border: 1px solid #d8dde6;
+}
+
+.slds-p-horizontal_small {
+    text-align: center
+}
+
+img{
+    width: 90%;
+    -webkit-transition: width 1ms;
+    -moz-transition: width 1ms;
+    -o-transition: width 1ms;
+     transition: width 1ms;
+}
+img:hover{
+    width: 200%;
+}
+
