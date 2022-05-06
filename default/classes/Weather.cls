@@ -25,7 +25,8 @@ public with sharing class Weather {
     private static List<Object> getForecastFor15Days(){
         Http http = new Http();
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Minsk?key=LRV3AVMAPFWEKN9WV7XFVZEEP');
+        String endpoint = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Minsk?key='+ String.valueof(API_KEY_WEATHER__c.getOrgDefaults().key__c);
+        system.debug(endpoint);
         request.setMethod('GET');
         HttpResponse response = http.send(request);
         Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
