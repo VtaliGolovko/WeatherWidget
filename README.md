@@ -1,4 +1,3 @@
 # Simple Weather Widget
-![](https://i.ibb.co/T8NQq7y/Weather-Widget.gif)
-testing git features
+![](https://i.ibb.co/1GrZJ77/Weather-Widget.gif)
 
